@@ -7,3 +7,7 @@ const formAlertDOM = document.querySelector('form-alert')
 const showTasks = async () => {}
 
 showTasks()
+
+tasksDOM,addEventListener('click', async (e) => {
+  
+})
