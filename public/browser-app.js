@@ -33,7 +33,12 @@ const showTasks = async () => {
            
         `
       })
-  } 
+      .join('')
+    tasksDOM.innerHTML = allTasks
+  } catch (error) {
+    tasksDOM.innerHTML = '<h5 class="empty-list">There was an error.</h5>'
+  }
+  loadingDOM.style.visibility = 'hidden'
 }
 
 showTasks()
