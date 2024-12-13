@@ -45,7 +45,7 @@
 body {
   font-family: 'League Spartan', sans-serif;
   font-weight: 300;
-  background-color: var(--light-2);
+  background-color: var(--dark);
   color: var(--grey-dk);
   line-height: var(--line-height);
 } 
@@ -136,6 +136,7 @@ button {
   padding: var(--xs) var(--sm); 
   font-size: 18px; 
   font-weight: bold;
+  cursor: pointer;
 }
 
 button:hover {
