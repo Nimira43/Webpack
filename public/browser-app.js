@@ -1,8 +1,8 @@
-const tasksDOM = document.querySelector('tasks')
-const loadingDOM = document.querySelector('loading-text')
-const formDOM = document.querySelector('task-form')
-const taskInputDOM = document.querySelector('task-input')
-const formAlertDOM = document.querySelector('form-alert')
+const tasksDOM = document.querySelector('.tasks')
+const loadingDOM = document.querySelector('.loading-text')
+const formDOM = document.querySelector('.task-form')
+const taskInputDOM = document.querySelector('.task-input')
+const formAlertDOM = document.querySelector('.form-alert')
 
 const showTasks = async () => {
   loadingDOM.style.visibility = 'visible'
@@ -19,14 +19,14 @@ const showTasks = async () => {
       .map((task) => {
         const { completed, _id: taskID, name } = task
         return `
-          <div class="single-task> ${completed && 'Task-completed'}">
+          <div class="single-task> ${completed && 'task-completed'}">
             <h5><span><i class="fa-regular fa-check-circle"></i></span>${name}</h5>
             <div class="task-links">
               <a href="task.html?id=${taskID}" class="edit-link">
                 <i class="fa-solid fa-edit"></i>
               </a>
-              <button type="btn" class="delete-btn" data=-id="${taskID}">
-                <i className="fa-solid fa-trash"></i>
+              <button type="btn" class="delete-btn" data-id="${taskID}">
+                <i class="fa-solid fa-trash"></i>
               </button>
             </div>
         </div>
@@ -43,7 +43,7 @@ const showTasks = async () => {
 
 showTasks()
 
-tasksDOM,addEventListener('click', async (e) => {
+tasksDOM.addEventListener('click', async (e) => {
   const el =  e.target
   if (el.parentElement.classList.contains('delete-btn')) {
     loadingDOM.style.visibility = 'visible'
@@ -67,8 +67,13 @@ formDOM.addEventListener('submit', async (e) => {
     taskInputDOM.value = ''
     formAlertDOM.style.display = 'block'
     formAlertDOM.textContent = `success, task added`
-    formAlertDOM.classList.add('text-succes')
+    formAlertDOM.classList.add('text-success')
   } catch(error) {
-    formAlertDOM.style.display = 
+    formAlertDOM.style.display = 'block'
+    formAlertDOM.innerHTML = `error, please try again`
   }
+  setTimeout(() => {
+    formAlertDOM.style.display = 'none'
+    formAlertDOM.classList.remove('text-success')
+  }, 3000)
 })
