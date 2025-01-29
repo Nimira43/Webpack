@@ -1,11 +1,15 @@
 {
-  "name": "webpack-tutorial",
+  "name": "intro-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nick Rabone",
-  "license": "MIT",
-  "description": ""
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
 }
