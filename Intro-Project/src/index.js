@@ -1,7 +1,9 @@
+import _ from 'lodash'
+
 function buttonClicked() {
   const el = document.getElementById('header')
   el.innerHTML = 'Update Completed!'
-
+ 
   const listItems = ['Dune', 'Life of Brian', 'Skyfall']
   const ul = document.getElementById('movie-list')
   
