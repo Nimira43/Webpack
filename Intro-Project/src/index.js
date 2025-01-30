@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-function buttonClicked() {
+document.getElementById('btn-1').addEventListener('click', () => {
   const el = document.getElementById('header')
   el.innerHTML = 'Update Completed!'
  
@@ -12,5 +12,4 @@ function buttonClicked() {
     tempEl.innerHTML = item
     ul.appendChild(tempEl)
   })
-}
-window.buttonClicked = buttonClicked
+})
