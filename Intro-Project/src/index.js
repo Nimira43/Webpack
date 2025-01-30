@@ -13,3 +13,4 @@ function buttonClicked() {
     ul.appendChild(tempEl)
   })
 }
+window.buttonClicked = buttonClicked
