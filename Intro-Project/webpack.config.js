@@ -10,7 +10,7 @@ module.exports = {
     rules: [
       {
         test: /.css$/,
-        use: []
+        use: ['style-loader', 'css-loader']  // order is important here! style-loader must be read before css-loader 
       }
     ]
   }
