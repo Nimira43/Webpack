@@ -1,3 +1,4 @@
+import './styles.css'
 import _ from 'lodash'
 
 document.getElementById('btn-1').addEventListener('click', () => {
