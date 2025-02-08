@@ -2,7 +2,7 @@
   "name": "intro-project",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",  
+  "type": "module",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode development"
   },
@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
   },
