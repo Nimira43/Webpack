@@ -1,6 +1,5 @@
 import './styles.css'
 import _ from 'lodash'
-import './clearButton'
 
 document.getElementById('btn-1').addEventListener('click', () => {
   const el = document.getElementById('header')
